@@ -28,6 +28,12 @@ slider.addEventListener('wheel', (event)=> {
     else slideUp();}
 });
 
+function steps(x) {
+ var step = document.querySelector(".steps > div:nth-of-type("+x+")");
+    console.log("a");
+    step.classList.toggle("unchecked");
+    step.classList.toggle("checked");
+}
 function topBtfunction() {
   if (scrollY > 100) {
     topBt.className = "show";

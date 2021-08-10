@@ -2,11 +2,12 @@
 body::-webkit-scrollbar {
     display: none;
   }
-  
   /* Hide scrollbar for IE, Edge and Firefox */
 body {
     -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    overflow-y: auto;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
   }
 body{
     margin:auto;
@@ -36,10 +37,9 @@ body{
     height:50px;
     border:rgb(255, 170, 0) solid;
     border-radius: 50px;
-    z-index: -999;
     position: fixed;
     bottom: 50px;
-    right: 10px;
+    left: 10px;
     opacity: 0;
     transition: 500ms ease;
 }
@@ -86,16 +86,37 @@ body{
     color:white;
     padding: 50px;
 }
-.steps > div{
+.unchecked{
     margin:10px auto;
     padding:10px;
     border: 5px solid rgb(255, 170, 0);
     width:80%;
 }
+.unchecked:hover{
+    border: 5px solid rgb(255, 230, 0);
+    background-color: #444444;
+    cursor: pointer;
+}
+.checked{
+    margin:10px auto;
+    padding:10px;
+    border: 5px solid rgb(255, 170, 0);
+    width:80%;
+    opacity:0.2;
+}
+.checked:hover{
+    border: 5px solid rgb(255, 230, 0);
+    background-color: #444444;
+    opacity:0.2;
+    cursor: pointer;
+}
 .steps > div p{
     margin:10px;
     font-size: 20px;
     text-align: center;
+}
+figure{
+    height:auto;
 }
 footer{
     position: absolute;
